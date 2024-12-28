@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a23;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        #fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1f88eb;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            border: 2px solid #0077e6;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #92cdf1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="fireworks"></canvas>
+
+    <div id="start-page" class="container">
+        <h1>Welcome
+            I make this web because im too lazy to say things to you through chat<br>
+            so i make this web to say Happy New Year to you.<br>
+            If you give a special memory to me, maybe you get your message different from others.<br>
+            Anyway, make sure to type your full name.<br>
+        </h1>
+        <button onclick="startApp()">Start</button>
+    </div>
+
+    <div id="name-page" class="container" style="display: none;">
+        <h1>Enter Your Full Name</h1>
+        <input type="text" id="name-input" placeholder="Your Name" onkeypress="handleKeyPress(event)">
+        <button onclick="submitName()">Submit</button>
+    </div>
+
+    <div id="message-page" class="container" style="display: none;">
+        <h1>Happy New Year!</h1>
+        <p class="message" id="message"></p>
+    </div>
+
+    <script src ="ny.js"></script>
+</body>
+</html>
